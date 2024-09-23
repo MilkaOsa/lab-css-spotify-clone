@@ -103,10 +103,26 @@ small {
       <img class="spotify-logo" src="spotify-logo.png" alt="Spotify Logo" />
 
 /* Spotify Features Section */
+
+/* Clearfix para evitar que elementos flotantes colapsen la sección */
+.spotify-section::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/* Aumentar el padding-bottom */
 .spotify-section {
   padding: 50px 0;
   text-align: center;
-  margin-bottom: 5px; /* Añadir margen inferior */
+  padding-bottom: 200px; /* Aumenta el espacio con padding */
+}
+
+/* Estilo para los iconos dentro de la sección Spotify Features */
+.feature img {
+  width: 100px; /* Ajusta este valor según el tamaño que quieras */
+  height: auto; /* Mantiene la proporción de la imagen */
+  margin-bottom: 15px; /* Espacio entre el icono y el título */
 }
 
 .spotify-section h2 {
@@ -126,13 +142,12 @@ small {
   margin: auto;
 }
 
-.feature {
-  width: 30%;
-  padding: 20px;
-  /* Quitar el borde */
-  border: none; 
-  border-radius: 10px;
-  text-align: center;
+.feature img {
+  width: 60px;  /* Ancho fijo para todas las imágenes */
+  height: 60px; /* Alto fijo para todas las imágenes */
+  object-fit: cover; /* Asegura que la imagen se ajuste dentro del área sin distorsionarse */
+  margin-bottom: 15px;
+  border-radius: /* Opcional: si deseas que las imágenes sean redondas */
 }
 
 .feature i {
@@ -144,10 +159,14 @@ small {
 
 .feature h3 {
   font-size: 22px;
+  color: #1db954; /* Verde Spotify */
   margin-bottom: 10px;
-  /* Cambiar el color del título a verde Spotify */
-  color: #1db954;
+  min-height: 60px; /* Define una altura mínima para alinear los títulos */
+  display: flex;
+  align-items: center; /* Centra el texto verticalmente dentro de la altura definida */
+  justify-content: center; /* Centra el texto horizontalmente */
 }
+
 
 .feature p {
   max-width: 200px; /* Limitar el ancho del párrafo */
@@ -168,37 +187,50 @@ small {
 }
 
 .green-text {
-  width: 50%;
+  width: 45%;
 }
 
 .green-text h2 {
   font-size: 32px;
-  margin-bottom: 20px;
+  font-weight: bold;
+  text-decoration: underline;
+  text-decoration-color: white;
+  margin-bottom: 30px;
 }
 
 .green-text ul {
-  list-style-type: none;
+  list-style: none;
   padding: 0;
+  margin: 0;
 }
 
 .green-text li {
-  margin-bottom: 10px;
-  font-size: 18px;
+  margin-bottom: 10px; /* Reduce el espacio entre items */
+  font-size: 16px; /* Tamaño de fuente reducido */
+  line-height: 1.3; /* Menos espacio entre líneas de texto */
+}
+
+.green-text strong {
+  font-weight: bold;
+}
+
+.spotify-logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 10%; /* Ajusta el tamaño del contenedor */
+}
+
+.spotify-logo {
+  width: 100px; /* Tamaño del logo */
+  height: auto;
 }
 
 .green-image {
-  position: relative;
   width: 40%;
 }
 
 .green-image img {
-  width: 100%;
-  border-radius: 10px;
-}
-
-.spotify-logo {
-  position: absolute;
-  top: -20px;
-  right: -20px;
-  width: 80px;
+  width: 80%;
+  border-radius:
 }
