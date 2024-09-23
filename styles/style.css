@@ -49,12 +49,12 @@ body {
 
 /* Aplicar diferentes pesos de Montserrat */
 h1 {
-  font-weight: 700; /* Montserrat Bold */
+  font-weight: 800; /* Montserrat Bold */
   margin: 20px 0;
 }
 
 h2 {
-  font-weight: 500; /* Montserrat Medium */
+  font-weight: 600; /* Montserrat Medium */
   margin: 20px 0;
 }
 
@@ -180,10 +180,11 @@ small {
 .green-section {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start; /* Alinea los elementos al inicio (parte superior) */
   background-color: #1db954;
   padding: 50px;
   color: white;
+  position: relative; /* Para poder posicionar el logo correctamente */
 }
 
 .green-text {
@@ -191,7 +192,7 @@ small {
 }
 
 .green-text h2 {
-  font-size: 32px;
+  font-size: 40px;
   font-weight: bold;
   text-decoration: underline;
   text-decoration-color: white;
@@ -205,20 +206,25 @@ small {
 }
 
 .green-text li {
-  margin-bottom: 10px; /* Reduce el espacio entre items */
-  font-size: 16px; /* Tamaño de fuente reducido */
-  line-height: 1.3; /* Menos espacio entre líneas de texto */
+  margin-bottom: 30px; /* Reduce el espacio entre items */
+  font-size: 20px;
+  line-height: 1.3;
+}
+
+.green-text li{
+  max-width: 30ch; /* Limita el texto a un ancho similar al del título */
 }
 
 .green-text strong {
   font-weight: bold;
 }
 
+/* Centrar el logo en la sección */
 .spotify-logo-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 10%; /* Ajusta el tamaño del contenedor */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Centrar el logo perfectamente */
 }
 
 .spotify-logo {
@@ -231,6 +237,6 @@ small {
 }
 
 .green-image img {
-  width: 80%;
-  border-radius:
+  width: 70%;
+  border-radius: 
 }
